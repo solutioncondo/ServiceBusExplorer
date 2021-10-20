@@ -79,7 +79,7 @@ namespace ServiceBusExplorer.Forms
         {
             lblExeVersion.Text = VersionProvider.GetExeVersion();
             
-            if (!VersionProvider.IsLatestVersion(out var releaseInfo))
+            /*if (!VersionProvider.IsLatestVersion(out var releaseInfo))
             {
                 labelLatestVersion.Text = $"New Release {releaseInfo.Version} Available";
                 linkLabelnewVersion.Text = releaseInfo.ReleaseUri.ToString();
@@ -88,12 +88,12 @@ namespace ServiceBusExplorer.Forms
                 labelReleaseInfo.Visible = true;
             }
             else
-            {
+            {*/
                 labelLatestVersion.Text = "You have the latest version!";
 
                 linkLabelnewVersion.Visible = false;
                 labelReleaseInfo.Visible = false;
-            }
+            //}
         }
         #endregion
 
