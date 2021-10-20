@@ -137,7 +137,7 @@ namespace ServiceBusExplorer.Forms
 
             // Initialize the DataGridView.
             bindingSource.DataSource = new BindingList<MessagePropertyInfo>(brokeredMessage.Properties.Select(p => new MessagePropertyInfo(p.Key,
-                                                                                                      GetShortValueTypeName(p.Value),
+                                                                                                      p.Value != null ? GetShortValueTypeName(p.Value) : "String",
                                                                                                       p.Value)).ToList());
             propertiesDataGridView.AutoGenerateColumns = false;
             propertiesDataGridView.AutoSize = true;
