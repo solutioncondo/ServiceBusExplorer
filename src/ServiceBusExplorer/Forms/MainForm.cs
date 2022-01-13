@@ -2137,13 +2137,14 @@ namespace ServiceBusExplorer.Forms
                     // Queue Node
                     if (serviceBusTreeView.SelectedNode.Tag is QueueDescription queueDescription)
                     {
-                        using (var deleteForm = new DeleteForm(queueDescription.Path, QueueEntity.ToLower()))
+                        MessageBox.Show("Deleting a queue is disabled in ServiceBusExplorer. You should do it on the azure website instead.", "Delete queue");
+                        /*using (var deleteForm = new DeleteForm(queueDescription.Path, QueueEntity.ToLower()))
                         {
                             if (deleteForm.ShowDialog() == DialogResult.OK)
                             {
                                 await serviceBusHelper.DeleteQueue(queueDescription);
                             }
-                        }
+                        }*/
                         return;
                     }
 
